@@ -13,13 +13,15 @@ import java.util.Scanner;
 public class HealthyHearts {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
-        String name;
 
-        System.out.println("Hello there!");
+        int age, maxRate;
+        double start, end;
         
-        System.out.println("What's your name? ");
-        name = input.nextLine();
-        System.out.printf("Hi %s! I'm Alice\n", name);
+        System.out.println("What's your age? ");
+        age = Integer.parseInt(input.nextLine());
+        maxRate = 220 - age;
+        start = 0.50 * maxRate;
+        end = 0.8 * maxRate;
+        System.out.printf("start: %f, end: %f, max rate: %d\n", start, end, maxRate);
     }
 }
